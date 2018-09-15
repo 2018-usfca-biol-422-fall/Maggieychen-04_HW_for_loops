@@ -17,5 +17,7 @@
 
 for file in "$@"
 do
-  grep ">" $file | wc -l
+  FILENAME=$(basename $file .fasta)
+  COUNT=$(grep ">" $file | wc -l)
+  echo In $FILENAME, there are $COUNT nucleotide
 done
