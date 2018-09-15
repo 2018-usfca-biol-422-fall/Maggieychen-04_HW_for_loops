@@ -13,11 +13,11 @@
 # AGCTCGTC.....
 
 # This will get the ">" of each sequence_id in fasta files (grep ">")
-# then count the number of ">" as the number of sequence (the wc -l)
+# then count the number of ">" as the number of sequence (the grep -c)
 
 for file in "$@"
 do
   FILENAME=$(basename "$file" .fasta)
   COUNT=$(grep -c ">" "$file" )
-  echo In "$FILENAME", there are "$COUNT" nucleotide
+  echo In "$FILENAME", there are "$COUNT" sequences
 done
