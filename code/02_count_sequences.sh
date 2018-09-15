@@ -14,6 +14,5 @@
 
 # This will get the ">" of each sequence_id in fasta files (grep ">")
 # then count the number of ">" as the number of sequence (the wc -l)
-grep ">" data/raw_data/animal_mRNA.fasta | wc -l
-grep ">" data/raw_data/crab_mitochondrial_rRNA.fasta | wc -l
-grep ">" data/raw_data/plant_rRNA.fasta | wc -l
+
+grep ">" $@ | wc -l
