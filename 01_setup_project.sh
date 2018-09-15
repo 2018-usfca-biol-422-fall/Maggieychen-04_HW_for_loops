@@ -20,3 +20,8 @@ echo "Unzipping the zip files to data/raw_data directory..... "
 echo "Deleting the zip from data/raw_data directory....."
 unzip data//raw_data/fasta_archive.zip -d data/raw_data
 rm data//raw_data/fasta_archive.zip
+
+# Add invisible files to empty directories
+# for git to track these directories
+echo "Adding invisible files to empty directories"
+touch code/.gitkeep output/figures/.gitkeep output/tables/.gitkeep
