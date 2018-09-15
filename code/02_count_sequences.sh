@@ -15,4 +15,7 @@
 # This will get the ">" of each sequence_id in fasta files (grep ">")
 # then count the number of ">" as the number of sequence (the wc -l)
 
-grep ">" $@ | wc -l
+for file in "$@"
+do
+  grep ">" $file | wc -l
+done
