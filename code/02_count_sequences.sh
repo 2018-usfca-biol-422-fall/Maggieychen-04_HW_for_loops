@@ -13,7 +13,10 @@
 # AGCTCGTC.....
 
 # This will get the ">" of each sequence_id in fasta files (grep ">")
-# then count the number of ">" as the number of sequence (the grep -c)
+# Then count the number of ">" as the number of sequence (the grep -c)
+# Due to the script and the fasta files are in two different directories
+# When running the command, please indicate the location of fasta files
+# Or change the dirictory location
 
 for file in "$@"
 do
